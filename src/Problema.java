@@ -26,13 +26,6 @@ public class Problema {
                 int index = 0;
 
                 /*
-                for (char c1 : linea.toUpperCase().toCharArray()) {
-                    for (char c2 : clave.toUpperCase().toCharArray()) {
-                        if (Character.isLetter(c1)) {
-                            index = alpha.indexOf(c2) + alpha.indexOf(c2);
-                        }
-                    }
-                }
 
                  */
 
@@ -46,7 +39,8 @@ public class Problema {
                         char c2 = clave.charAt(cont);
 
                             index = (alpha.indexOf(c1) + alpha.indexOf(c2)) % 26;
-                            System.out.print(alpha.charAt(index));
+                            //System.out.print(alpha.charAt(index));
+                            bw.write(alpha.charAt(index));
                             break;
                         }
                         if (cont == clave.length() - 1){
@@ -55,7 +49,8 @@ public class Problema {
                             cont++;
                         }
                     } else {
-                        System.out.print(c1);
+                        bw.write(c1);
+                        //System.out.print(c1);
                     }
                 }
 
